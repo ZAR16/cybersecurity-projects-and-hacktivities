@@ -23,8 +23,9 @@ I am a cybersecurity enthusiast with experience in vulnerability assessment, net
 [//]: # (Malware Analysis & Reverse Engineering – Investigating malicious files and behaviors.)
 
 Virtual Homelab - Setting up OPNsense Firewall, Windows Server, Active Directory, Vulnhub Machines, and Kali Linux
+(Status: Ongoing)
 
-# 🔹 Hacktivities & CTF Writeups
+### 🔹 Hacktivities, CTF Penetration Testing Reports & CTF Writeups
 
 TryHackMe & Hack The Box Walkthroughs – Solutions and lessons learned from solving CTF rooms.
 
@@ -32,7 +33,7 @@ TryHackMe & Hack The Box Walkthroughs – Solutions and lessons learned from sol
 
 [//]: # (Threat Hunting & OSINT – Research and methodologies for proactive security defense.)
 
-# 🛠 Tools & Technologies
+### 🛠 Tools & Technologies
 
 Kali Linux, Wireshark, Nmap, Metasploit
 
