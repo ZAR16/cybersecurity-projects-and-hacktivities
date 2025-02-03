@@ -27,7 +27,12 @@ Virtual Homelab - Setting up OPNsense Firewall, Windows Server, Active Directory
 
 ### 🔹 Hacktivities, CTF Penetration Testing Reports & CTF Writeups
 
-TryHackMe & Hack The Box Walkthroughs – Solutions and lessons learned from solving CTF rooms.
+#### Penetration Testing Reports
+Vulnhub's Deathnote (Kira): https://docs.google.com/document/d/1xM-nEvh1Uj202ST_xj5fygg5CtKqe3cMyDgyBmmFohw/edit?usp=sharing
+
+#### CTF Walkthroughs – Solutions and lessons learned from solving CTF rooms.
+Vulnhub's Deathnote (Kira): https://docs.google.com/document/d/1-YOGzWnMDZxIjP6paZUAuh9F4mfgc6B64whe_RH-p7A/edit?usp=sharing
+Vulnhub's Mr. Robot: https://docs.google.com/document/d/1IVgG2K7QR7l9M7A8VNpqI6Fsq1wfrQUA0aCP55dugnM/edit?usp=sharing
 
 [//]: # (Custom CTF Challenges – My own security challenges and puzzles.)
 
