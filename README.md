@@ -1,5 +1,5 @@
 # cybersecurity-projects-and-hacktivities
-### 🔒 Cybersecurity Projects & Hacktivities
+# 🔒 Cybersecurity Projects & Hacktivities
 
 Welcome to my cybersecurity repository! This space showcases my journey in cybersecurity, including hands-on projects and Capture The Flag (CTF) challenges.
 
@@ -9,7 +9,7 @@ I am a cybersecurity enthusiast with experience in vulnerability assessment, net
 
 ## 📂 Repository Contents
 
-# 🔹 Cybersecurity Project/s
+### 🔹 Cybersecurity Project/s
 [//]: # (This may be the most platform independent comment)
 
 [//]: # (Vulnerability Scanning & Analysis – Scripts and reports on scanning systems for security weaknesses.)
@@ -42,7 +42,7 @@ Kali Linux, Wireshark, Nmap, Metasploit
 
 [//]: # (Threat Intelligence & OSINT Tools)
 
-# 📌 Goals & Learning Path
+### 📌 Goals & Learning Path
 
 Advance my skills in penetration testing, incident response and threat analysis.
 
@@ -50,7 +50,7 @@ Advance my skills in penetration testing, incident response and threat analysis.
 
 Obtain industry certifications and participate in cybersecurity competitions.
 
-# 🤝 Connect with Me
+### 🤝 Connect with Me
 
 LinkedIn: https://www.linkedin.com/in/john-roezel-fuentes-855349170
 
