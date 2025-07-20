@@ -34,6 +34,7 @@ Virtual Homelab - Setting up OPNsense Firewall, Windows Server, Active Directory
 - Vulnhub's Deathnote (Kira): https://docs.google.com/document/d/1-YOGzWnMDZxIjP6paZUAuh9F4mfgc6B64whe_RH-p7A/edit?usp=sharing
 - Vulnhub's Mr. Robot: https://docs.google.com/document/d/1IVgG2K7QR7l9M7A8VNpqI6Fsq1wfrQUA0aCP55dugnM/edit?usp=sharing
 - HackTheBox - Planning: https://github.com/ZAR16/cybersecurity-projects-and-hacktivities/blob/main/HTB_Machines_Walkthrough/Planning/Planning%20Walkthrough.md
+- HackTheBox - Code: https://github.com/ZAR16/cybersecurity-projects-and-hacktivities/blob/main/HTB_Machines_Walkthrough/Code/HTB%20Code.md
 
 [//]: # (Custom CTF Challenges – My own security challenges and puzzles.)
 
