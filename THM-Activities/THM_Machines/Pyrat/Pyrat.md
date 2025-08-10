@@ -1,4 +1,5 @@
-![[Pasted image 20250810193916.png]]
+![Pyrat image](Pasted%20image%2020250810193916.png)
+<!--![[Pasted image 20250810193916.png]]-->
 ## Description:
 Pyrat receives a curious response from an HTTP server, which leads to a potential Python code execution vulnerability. With a cleverly crafted payload, it is possible to gain a shell on the machine. Delving into the directories, the author uncovers a well-known folder that provides a user with access to credentials. A subsequent exploration yields valuable insights into the application's older version. Exploring possible endpoints using a custom script, the user can discover a special endpoint and ingeniously expand their exploration by fuzzing passwords. The script unveils a password, ultimately granting access to the root.
 
@@ -61,7 +62,8 @@ Nmap done: 1 IP address (1 host up) scanned in 198.58 seconds
 ```
 
 I typed the IP and port number on the site to check if we could find anything but it returns 'Try a more basic connection' as shown in the image below:
-![[2025-08-10_19-41.png]]
+![Pyrat image](2025-08-10_19-41.png)
+<!--![[2025-08-10_19-41.png]]-->
 
 
 
@@ -87,30 +89,38 @@ print(1+1)
 As seen above, it returned '2' as a response. Therefore, our theory was validated that it is running a python code. Using this information, we could run a payload to create a connection.
 
 I used Payload playground to create a python reverse shell using this link: https://payloadplayground.com/generators/reverse-shell. I only copied the command inside the single quote.
-![[2025-08-10_19-55.png]]
+![Pyrat image](2025-08-10_19-55.png)
+<!--![[2025-08-10_19-55.png]]-->
 I setup the netcat listener on port 4444 first then pasted the generated payload in the nc connection that we established earlier:
-![[2025-08-10_19-59.png]]
+![Pyrat image](2025-08-10_19-59.png)
+<!--![[2025-08-10_19-59.png]]-->
 
 Press enter and we would see the connection in our nc listener:
-![[2025-08-10_20-02.png]]
+![Pyrat image](2025-08-10_20-02.png)
+<!--![[2025-08-10_20-02.png]]-->
 
 After a lot of manual enumeration, I stumbled upon the /opt/dev/.git directory where you'll see a config file:
-![[2025-08-10_20-05.png]]
+![Pyrat image](2025-08-10_20-05.png)
+<!--![[2025-08-10_20-05.png]]-->
 
 Check the file and you'll get the Credentials to login via ssh.
-![[2025-08-10_20-08.png]]
+![Pyrat image](2025-08-10_20-08.png)
+<!--![[2025-08-10_20-08.png]]-->
 
 ### User flag
 After logging in, you'll see the user flag.
-![[userflag.png]]
+![Pyrat image](userflag.png)
+<!--![[userflag.png]]-->
 
 
 ### Privilege Escalation
 I checked the processes to look for possible privilege escalation vectors and there's a pyrat.py file that is running in the background using the root privileges.
-![[2025-08-10_20-15.png]]
+![Pyrat image](2025-08-10_20-15.png)
+<!--![[2025-08-10_20-15.png]]-->
 
 Since we saw this endpoint existed in the old version, we can fuzz for other endpoints. I initially typed 'admin' in our nc connection to check for a low hanging fruit and I just got lucky to get a valid endpoint.
-![[2025-08-10_20-28.png]]
+![Pyrat image](2025-08-10_20-28.png)
+<!--![[2025-08-10_20-28.png]]-->
 
 
 After this, I was prompt to enter a password so I asked the help of an LLM to write this **python script** to brute-force its password:
@@ -174,7 +184,8 @@ if __name__ == "__main__":
     fuzz_passwords()
 ```
 
-![[admin_password.png]]
+![Pyrat image](admin_password.png)
+<!--![[admin_password.png]]-->
 
 We got a valid password! Now, we just got to enter it in our nc connection to gain a shell.
 
@@ -182,7 +193,8 @@ We got a valid password! Now, we just got to enter it in our nc connection to ga
 
 After a successful login, you just got to read the root flag.
 
-![[rootflag.png]]
+![Pyrat image](rootflag.png)
+<!--![[rootflag.png]]-->
 
 
 Happy Hacking!!!
