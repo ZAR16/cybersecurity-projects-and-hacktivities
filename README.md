@@ -1,4 +1,3 @@
-# cybersecurity-projects-and-hacktivities
 # 🔒 Cybersecurity Projects & Hacktivities
 
 Welcome to my cybersecurity repository! This space showcases my journey in cybersecurity, including hands-on projects and Capture The Flag (CTF) challenges.
