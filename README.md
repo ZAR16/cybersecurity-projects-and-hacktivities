@@ -62,7 +62,7 @@ Kali Linux, Wireshark, Nmap, Metasploit
 
 - LinkedIn: https://www.linkedin.com/in/john-roezel-fuentes-855349170
 
-- TryHackMe: https://tryhackme.com/r/p/unsocial3670
+- TryHackMe: https://tryhackme.com/p/nightcrypt3670
 
 [//]: # (Hack The Box: [Your Hack The Box Profile])
 
