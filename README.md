@@ -63,7 +63,10 @@ Kali Linux, Wireshark, Nmap, Metasploit
 
 - TryHackMe: https://tryhackme.com/p/nightcrypt3670
 
+[![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/nightcrypt3670.png)](https://tryhackme.com/p/nightcrypt3670)
+
+  
 [//]: # (Hack The Box: [Your Hack The Box Profile])
 
 
-Feel free to explore, contribute, or reach out for collaboration! 🛡️
+Feel free to reach out! 🛡️
